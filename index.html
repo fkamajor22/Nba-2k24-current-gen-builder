@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NBA 2K24 Build Simulator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">NBA 2K24 Build Simulator (Current Gen)</h1>
+
+    <div class="grid grid-cols-2 gap-4 bg-gray-800 p-4 rounded-lg mb-4">
+      <div>
+        <label class="block mb-1">Position</label>
+        <select id="position" class="w-full p-2 bg-gray-700 text-white rounded">
+          <option>PG</option>
+          <option>SG</option>
+          <option>SF</option>
+          <option>PF</option>
+          <option>C</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">Height</label>
+        <input id="height" type="number" value="6.5" step="0.1" class="w-full p-2 bg-gray-700 text-white rounded">
+      </div>
+      <div>
+        <label class="block mb-1">Weight</label>
+        <input id="weight" type="number" value="180" class="w-full p-2 bg-gray-700 text-white rounded">
+      </div>
+      <div>
+        <label class="block mb-1">Wingspan</label>
+        <input id="wingspan" type="number" value="6.9" step="0.1" class="w-full p-2 bg-gray-700 text-white rounded">
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="block mb-2 font-bold">Attributes</label>
+      <div class="grid grid-cols-2 gap-2">
+        <div><label>Driving Dunk</label><input type="range" id="dunk" min="25" max="99" value="80" class="w-full"></div>
+        <div><label>3PT Shot</label><input type="range" id="three" min="25" max="99" value="85" class="w-full"></div>
+        <div><label>Ball Handle</label><input type="range" id="handle" min="25" max="99" value="87" class="w-full"></div>
+        <div><label>Speed</label><input type="range" id="speed" min="25" max="99" value="80" class="w-full"></div>
+      </div>
+    </div>
+
+    <button onclick="generateBuild()" class="bg-green-600 px-4 py-2 rounded hover:bg-green-700">Generate Build</button>
+
+    <div id="output" class="mt-6 p-4 bg-gray-800 rounded shadow-lg"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
